@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ir.msob.jima.lock</groupId>
+        <artifactId>lock-parent</artifactId>
+        <version>1.1.1</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>cache-reports</artifactId>
+    <name>reports</name>
+    <description>reports</description>
+    <dependencies>
+        <dependency>
+            <groupId>ir.msob.jima.lock</groupId>
+            <artifactId>lock-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ir.msob.jima.lock</groupId>
+            <artifactId>lock-service</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ir.msob.jima.lock</groupId>
+            <artifactId>lock-ral-mongo-beans</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ir.msob.jima.lock</groupId>
+            <artifactId>lock-ral-redisson-beans</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>${jacoco-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>report-aggregate</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

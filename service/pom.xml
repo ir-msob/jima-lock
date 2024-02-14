@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ir.msob.jima.lock</groupId>
+        <artifactId>lock-parent</artifactId>
+        <version>1.1.1</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>lock-service</artifactId>
+    <name>service</name>
+    <description>service</description>
+    <packaging>jar</packaging>
+    <dependencies>
+        <!-- MSob -->
+        <dependency>
+            <groupId>ir.msob.jima.lock</groupId>
+            <artifactId>lock-commons</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ir.msob.jima.core</groupId>
+            <artifactId>core-beans</artifactId>
+            <version>${core-parent.version}</version>
+        </dependency>
+    </dependencies>
+</project>

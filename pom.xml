@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ir.msob.jima.parent</groupId>
+        <artifactId>jima-parent</artifactId>
+        <version>1.1.4</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>ir.msob.jima.lock</groupId>
+    <artifactId>lock-parent</artifactId>
+    <version>1.1.1</version>
+    <name>lock-parent</name>
+    <description>lock-parent</description>
+    <packaging>pom</packaging>
+    <properties>
+        <!-- MSob -->
+        <core-parent.version>1.1.8</core-parent.version>
+        <security-parent.version>1.1.3</security-parent.version>
+    </properties>
+    <modules>
+        <module>commons</module>
+        <module>service</module>
+        <module>ral</module>
+        <module>starter</module>
+        <module>reports</module>
+    </modules>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ir.msob.jima.parent</groupId>
+                <artifactId>jima-bom</artifactId>
+                <version>${jima-parent.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

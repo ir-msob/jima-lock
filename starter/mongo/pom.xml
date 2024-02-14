@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ir.msob.jima.lock</groupId>
+        <artifactId>lock-starter</artifactId>
+        <version>1.1.1</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>lock-starter-mongo</artifactId>
+    <name>mongo</name>
+    <description>mongo</description>
+    <packaging>pom</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>ir.msob.jima.lock</groupId>
+            <artifactId>lock-ral-mongo-beans</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
+        </dependency>
+    </dependencies>
+</project>
